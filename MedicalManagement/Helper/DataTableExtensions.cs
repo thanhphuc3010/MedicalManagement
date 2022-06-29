@@ -11,8 +11,7 @@ namespace MedicalManagement.Helper
     {
         public static T ToEntity<T>(this DataTable table) where T : new()
         {
-            // Phucpt changed code in this line for demo git pull
-            // Phucpc changed to make conflict
+            // Demo git push
             T entity = new T();
             foreach (DataRow row in table.Rows)
             {
