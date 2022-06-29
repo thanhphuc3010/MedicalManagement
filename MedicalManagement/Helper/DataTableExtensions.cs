@@ -12,6 +12,7 @@ namespace MedicalManagement.Helper
         public static T ToEntity<T>(this DataTable table) where T : new()
         {
             // Demo git push
+            // Demo git pull from tramlh
             T entity = new T();
             foreach (DataRow row in table.Rows)
             {
