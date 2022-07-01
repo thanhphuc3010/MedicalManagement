@@ -70,6 +70,8 @@ namespace MedicalManagement
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtLot = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -163,7 +165,7 @@ namespace MedicalManagement
             this.txtExpiry.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtExpiry.Location = new System.Drawing.Point(439, 116);
             this.txtExpiry.Name = "txtExpiry";
-            this.txtExpiry.Size = new System.Drawing.Size(196, 28);
+            this.txtExpiry.Size = new System.Drawing.Size(207, 28);
             this.txtExpiry.TabIndex = 8;
             // 
             // txtMedicineName
@@ -195,7 +197,7 @@ namespace MedicalManagement
             this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtQuantity.Location = new System.Drawing.Point(440, 183);
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(195, 28);
+            this.txtQuantity.Size = new System.Drawing.Size(206, 28);
             this.txtQuantity.TabIndex = 12;
             // 
             // txt_ingrediant
@@ -268,7 +270,7 @@ namespace MedicalManagement
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPrice.Location = new System.Drawing.Point(439, 319);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(196, 28);
+            this.txtPrice.Size = new System.Drawing.Size(207, 28);
             this.txtPrice.TabIndex = 20;
             // 
             // txt_inputPrice
@@ -276,7 +278,7 @@ namespace MedicalManagement
             this.txt_inputPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_inputPrice.Location = new System.Drawing.Point(439, 253);
             this.txt_inputPrice.Name = "txt_inputPrice";
-            this.txt_inputPrice.Size = new System.Drawing.Size(196, 28);
+            this.txt_inputPrice.Size = new System.Drawing.Size(207, 28);
             this.txt_inputPrice.TabIndex = 19;
             // 
             // txtNote
@@ -457,11 +459,31 @@ namespace MedicalManagement
             this.label16.Text = "NOTE";
             this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(542, 366);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(28, 20);
+            this.label3.TabIndex = 42;
+            this.label3.Text = "Lô";
+            // 
+            // txtLot
+            // 
+            this.txtLot.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLot.Location = new System.Drawing.Point(546, 389);
+            this.txtLot.Name = "txtLot";
+            this.txtLot.Size = new System.Drawing.Size(100, 28);
+            this.txtLot.TabIndex = 41;
+            // 
             // frmMedicineNotReceived
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1447, 832);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtLot);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -553,5 +575,7 @@ namespace MedicalManagement
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtLot;
     }
 }

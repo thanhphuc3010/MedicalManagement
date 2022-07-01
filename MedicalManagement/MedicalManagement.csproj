@@ -105,11 +105,11 @@
     <Compile Include="frmMedicineReceived.Designer.cs">
       <DependentUpon>frmMedicineReceived.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmPayment.cs">
+    <Compile Include="frmPay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmPayment.Designer.cs">
-      <DependentUpon>frmPayment.cs</DependentUpon>
+    <Compile Include="frmPay.Designer.cs">
+      <DependentUpon>frmPay.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -176,8 +176,8 @@
     <EmbeddedResource Include="frmMedicineReceived.resx">
       <DependentUpon>frmMedicineReceived.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmPayment.resx">
-      <DependentUpon>frmPayment.cs</DependentUpon>
+    <EmbeddedResource Include="frmPay.resx">
+      <DependentUpon>frmPay.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmTransactionSearch.resx">
       <DependentUpon>frmTransactionSearch.cs</DependentUpon>

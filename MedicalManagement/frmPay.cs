@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MedicalManagement
 {
-    public partial class frmPayment : Form
+    public partial class frmPay : Form
     {
-        public frmPayment()
+        public frmPay()
         {
             InitializeComponent();
         }

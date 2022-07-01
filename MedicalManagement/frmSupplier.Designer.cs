@@ -203,36 +203,36 @@ namespace MedicalManagement
             // btnNext
             // 
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
-            this.btnNext.Location = new System.Drawing.Point(218, 354);
+            this.btnNext.Location = new System.Drawing.Point(213, 363);
             this.btnNext.Name = "btnNext";
-            this.btnNext.Size = new System.Drawing.Size(53, 34);
+            this.btnNext.Size = new System.Drawing.Size(40, 34);
             this.btnNext.TabIndex = 25;
             this.btnNext.UseVisualStyleBackColor = true;
             // 
             // btnPrevious
             // 
             this.btnPrevious.Image = ((System.Drawing.Image)(resources.GetObject("btnPrevious.Image")));
-            this.btnPrevious.Location = new System.Drawing.Point(158, 354);
+            this.btnPrevious.Location = new System.Drawing.Point(166, 363);
             this.btnPrevious.Name = "btnPrevious";
-            this.btnPrevious.Size = new System.Drawing.Size(54, 34);
+            this.btnPrevious.Size = new System.Drawing.Size(41, 34);
             this.btnPrevious.TabIndex = 24;
             this.btnPrevious.UseVisualStyleBackColor = true;
             // 
             // btnLast
             // 
             this.btnLast.Image = ((System.Drawing.Image)(resources.GetObject("btnLast.Image")));
-            this.btnLast.Location = new System.Drawing.Point(299, 354);
+            this.btnLast.Location = new System.Drawing.Point(268, 363);
             this.btnLast.Name = "btnLast";
-            this.btnLast.Size = new System.Drawing.Size(60, 34);
+            this.btnLast.Size = new System.Drawing.Size(47, 34);
             this.btnLast.TabIndex = 23;
             this.btnLast.UseVisualStyleBackColor = true;
             // 
             // btnFirst
             // 
             this.btnFirst.Image = ((System.Drawing.Image)(resources.GetObject("btnFirst.Image")));
-            this.btnFirst.Location = new System.Drawing.Point(70, 354);
+            this.btnFirst.Location = new System.Drawing.Point(109, 363);
             this.btnFirst.Name = "btnFirst";
-            this.btnFirst.Size = new System.Drawing.Size(60, 34);
+            this.btnFirst.Size = new System.Drawing.Size(47, 34);
             this.btnFirst.TabIndex = 22;
             this.btnFirst.UseVisualStyleBackColor = true;
             // 

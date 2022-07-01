@@ -72,6 +72,8 @@ namespace MedicalManagement
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtLot = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -475,12 +477,32 @@ namespace MedicalManagement
             this.label17.TabIndex = 45;
             this.label17.Text = "Ngày tạo";
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(609, 187);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(28, 20);
+            this.label5.TabIndex = 47;
+            this.label5.Text = "Lô";
+            // 
+            // txtLot
+            // 
+            this.txtLot.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLot.Location = new System.Drawing.Point(613, 210);
+            this.txtLot.Name = "txtLot";
+            this.txtLot.Size = new System.Drawing.Size(129, 28);
+            this.txtLot.TabIndex = 46;
+            // 
             // frmExpiry
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1442, 729);
+            this.Controls.Add(this.label5);
+            this.Controls.Add(this.txtLot);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -575,5 +597,7 @@ namespace MedicalManagement
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox txtLot;
     }
 }

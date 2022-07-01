@@ -26,5 +26,10 @@ namespace MedicalManagement
         {
 
         }
+
+        private void txtLot_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

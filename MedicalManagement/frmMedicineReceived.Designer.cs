@@ -70,6 +70,8 @@ namespace MedicalManagement
             this.label14 = new System.Windows.Forms.Label();
             this.txtNote = new System.Windows.Forms.TextBox();
             this.label15 = new System.Windows.Forms.Label();
+            this.txtLot = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -364,7 +366,7 @@ namespace MedicalManagement
             this.txtTax.ForeColor = System.Drawing.Color.Black;
             this.txtTax.Location = new System.Drawing.Point(377, 403);
             this.txtTax.Name = "txtTax";
-            this.txtTax.Size = new System.Drawing.Size(244, 28);
+            this.txtTax.Size = new System.Drawing.Size(88, 28);
             this.txtTax.TabIndex = 33;
             // 
             // txtMade_in
@@ -487,11 +489,34 @@ namespace MedicalManagement
             this.label15.TabIndex = 48;
             this.label15.Text = "NOTE";
             // 
+            // txtLot
+            // 
+            this.txtLot.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtLot.ForeColor = System.Drawing.Color.Black;
+            this.txtLot.Location = new System.Drawing.Point(471, 403);
+            this.txtLot.Name = "txtLot";
+            this.txtLot.Size = new System.Drawing.Size(150, 28);
+            this.txtLot.TabIndex = 51;
+            this.txtLot.TextChanged += new System.EventHandler(this.txtLot_TextChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.Black;
+            this.label16.Location = new System.Drawing.Point(467, 380);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(28, 20);
+            this.label16.TabIndex = 50;
+            this.label16.Text = "Lô";
+            // 
             // Medicine_received
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1496, 868);
+            this.Controls.Add(this.txtLot);
+            this.Controls.Add(this.label16);
             this.Controls.Add(this.txtNote);
             this.Controls.Add(this.label15);
             this.Controls.Add(this.label14);
@@ -583,5 +608,7 @@ namespace MedicalManagement
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox txtNote;
         private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.TextBox txtLot;
+        private System.Windows.Forms.Label label16;
     }
 }
