@@ -48,7 +48,6 @@ namespace MedicalManagement
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtTotal_input = new System.Windows.Forms.TextBox();
             this.txtTotalSell = new System.Windows.Forms.TextBox();
-            this.cbbDiscount = new System.Windows.Forms.ComboBox();
             this.cbbProperties = new System.Windows.Forms.ComboBox();
             this.cbbValuesFilter = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -61,7 +60,6 @@ namespace MedicalManagement
             this.btnBack = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -166,7 +164,7 @@ namespace MedicalManagement
             this.txtDateRemain.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDateRemain.Location = new System.Drawing.Point(444, 268);
             this.txtDateRemain.Name = "txtDateRemain";
-            this.txtDateRemain.Size = new System.Drawing.Size(298, 28);
+            this.txtDateRemain.Size = new System.Drawing.Size(133, 28);
             this.txtDateRemain.TabIndex = 9;
             // 
             // txtExpiry
@@ -243,15 +241,6 @@ namespace MedicalManagement
             this.txtTotalSell.Size = new System.Drawing.Size(298, 28);
             this.txtTotalSell.TabIndex = 19;
             // 
-            // cbbDiscount
-            // 
-            this.cbbDiscount.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbbDiscount.FormattingEnabled = true;
-            this.cbbDiscount.Location = new System.Drawing.Point(444, 208);
-            this.cbbDiscount.Name = "cbbDiscount";
-            this.cbbDiscount.Size = new System.Drawing.Size(144, 30);
-            this.cbbDiscount.TabIndex = 20;
-            // 
             // cbbProperties
             // 
             this.cbbProperties.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -321,18 +310,18 @@ namespace MedicalManagement
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(306, 27);
+            this.label2.Location = new System.Drawing.Point(248, 27);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(200, 26);
+            this.label2.Size = new System.Drawing.Size(271, 26);
             this.label2.TabIndex = 28;
-            this.label2.Text = "QUẢN LÝ HẠN SD";
+            this.label2.Text = "QUẢN LÝ HẠN SỬ DỤNG";
             // 
             // txtTax
             // 
             this.txtTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTax.Location = new System.Drawing.Point(602, 212);
+            this.txtTax.Location = new System.Drawing.Point(448, 210);
             this.txtTax.Name = "txtTax";
-            this.txtTax.Size = new System.Drawing.Size(144, 28);
+            this.txtTax.Size = new System.Drawing.Size(129, 28);
             this.txtTax.TabIndex = 29;
             // 
             // btnBack
@@ -360,21 +349,11 @@ namespace MedicalManagement
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(598, 187);
+            this.label4.Location = new System.Drawing.Point(444, 187);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 20);
             this.label4.TabIndex = 32;
             this.label4.Text = "Thuế";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(444, 187);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(76, 20);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Giảm giá";
             // 
             // label6
             // 
@@ -500,6 +479,7 @@ namespace MedicalManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Menu;
             this.ClientSize = new System.Drawing.Size(1442, 729);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
@@ -513,7 +493,6 @@ namespace MedicalManagement
             this.Controls.Add(this.label8);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.btnBack);
@@ -526,7 +505,6 @@ namespace MedicalManagement
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbbValuesFilter);
             this.Controls.Add(this.cbbProperties);
-            this.Controls.Add(this.cbbDiscount);
             this.Controls.Add(this.txtTotalSell);
             this.Controls.Add(this.txtTotal_input);
             this.Controls.Add(this.txtQuantity);
@@ -573,7 +551,6 @@ namespace MedicalManagement
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtTotal_input;
         private System.Windows.Forms.TextBox txtTotalSell;
-        private System.Windows.Forms.ComboBox cbbDiscount;
         private System.Windows.Forms.ComboBox cbbProperties;
         private System.Windows.Forms.ComboBox cbbValuesFilter;
         private System.Windows.Forms.Label label1;
@@ -586,7 +563,6 @@ namespace MedicalManagement
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;

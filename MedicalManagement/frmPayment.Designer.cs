@@ -119,7 +119,7 @@ namespace MedicalManagement
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(755, 550);
+            this.dataGridView1.Size = new System.Drawing.Size(755, 529);
             this.dataGridView1.TabIndex = 9;
             // 
             // label1
@@ -158,15 +158,15 @@ namespace MedicalManagement
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(796, 284);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(131, 24);
+            this.label7.Size = new System.Drawing.Size(146, 24);
             this.label7.TabIndex = 16;
-            this.label7.Text = "Tổng giảm giá";
+            this.label7.Text = "Tổng chiết khấu";
             // 
             // button4
             // 
             this.button4.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button4.ForeColor = System.Drawing.Color.Blue;
-            this.button4.Location = new System.Drawing.Point(211, 150);
+            this.button4.Location = new System.Drawing.Point(199, 150);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(127, 34);
             this.button4.TabIndex = 19;
@@ -188,7 +188,7 @@ namespace MedicalManagement
             // 
             this.button6.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button6.ForeColor = System.Drawing.Color.Blue;
-            this.button6.Location = new System.Drawing.Point(528, 150);
+            this.button6.Location = new System.Drawing.Point(527, 150);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(127, 34);
             this.button6.TabIndex = 21;
@@ -199,7 +199,7 @@ namespace MedicalManagement
             // 
             this.button7.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button7.ForeColor = System.Drawing.Color.Blue;
-            this.button7.Location = new System.Drawing.Point(371, 150);
+            this.button7.Location = new System.Drawing.Point(363, 150);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(127, 34);
             this.button7.TabIndex = 20;

@@ -268,11 +268,11 @@ namespace MedicalManagement
             this.label1.BackColor = System.Drawing.SystemColors.Control;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
             this.label1.ForeColor = System.Drawing.Color.Blue;
-            this.label1.Location = new System.Drawing.Point(928, 62);
+            this.label1.Location = new System.Drawing.Point(960, 32);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(232, 26);
+            this.label1.Size = new System.Drawing.Size(251, 26);
             this.label1.TabIndex = 32;
-            this.label1.Text = "DANH SÁCH BÁC SỸ";
+            this.label1.Text = "DANH SÁCH DƯỢC SỸ";
             // 
             // label2
             // 
@@ -280,9 +280,9 @@ namespace MedicalManagement
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(76, 83);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(95, 24);
+            this.label2.Size = new System.Drawing.Size(107, 24);
             this.label2.TabIndex = 33;
-            this.label2.Text = "Mã bác sỹ";
+            this.label2.Text = "Mã dược sỹ";
             // 
             // label3
             // 
@@ -338,7 +338,7 @@ namespace MedicalManagement
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(106, 131);
+            this.label8.Location = new System.Drawing.Point(102, 128);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(35, 24);
             this.label8.TabIndex = 39;
@@ -348,7 +348,7 @@ namespace MedicalManagement
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(348, 131);
+            this.label10.Location = new System.Drawing.Point(348, 128);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(44, 24);
             this.label10.TabIndex = 40;
