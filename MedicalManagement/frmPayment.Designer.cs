@@ -53,7 +53,7 @@ namespace MedicalManagement
             // button1
             // 
             this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(411, 84);
+            this.button1.Location = new System.Drawing.Point(409, 84);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(127, 32);
             this.button1.TabIndex = 0;
@@ -65,7 +65,7 @@ namespace MedicalManagement
             this.button2.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.Blue;
-            this.button2.Location = new System.Drawing.Point(851, 568);
+            this.button2.Location = new System.Drawing.Point(959, 523);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(135, 34);
             this.button2.TabIndex = 1;
@@ -223,7 +223,7 @@ namespace MedicalManagement
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(907, 55);
+            this.label2.Location = new System.Drawing.Point(883, 87);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(232, 26);
             this.label2.TabIndex = 23;
