@@ -71,5 +71,10 @@ namespace MedicalManagement.Forms
                 label1.Text = connection.State.ToString();
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
