@@ -54,7 +54,9 @@ namespace MedicalManagement.Forms
             btnCancle.Enable();
          
             ResetAllTextBox();
-            BindingCustomerData(customer);
+            Customer customer = new Customer();
+            this.customer = customer;
+            BindingCustomerData(this.customer);
 
             txtId.Text = GenerateId("KH");
         }
@@ -135,8 +137,9 @@ namespace MedicalManagement.Forms
             customer = customerBindingSource.Current as Customer;
 
             Customer editingCustomer = customer.Clone() as Customer;
+            this.customer = editingCustomer;
 
-            BindingCustomerData(editingCustomer);
+            BindingCustomerData(this.customer);
             (sender as Button).Enabled = false;
             btnAdd.Enabled = false;
             btnDel.Enabled = false;
