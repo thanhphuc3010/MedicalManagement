@@ -30,16 +30,21 @@ namespace MedicalManagement.Forms
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmKhachhang));
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.lblKH = new System.Windows.Forms.Label();
-            this.btnDau = new System.Windows.Forms.Button();
-            this.btnCuoi = new System.Windows.Forms.Button();
-            this.btnSau = new System.Windows.Forms.Button();
-            this.btnTruoc = new System.Windows.Forms.Button();
             this.dgvKhachhang = new System.Windows.Forms.DataGridView();
+            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.typeDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.btnCancle = new System.Windows.Forms.Button();
             this.pnCustomer = new System.Windows.Forms.Panel();
             this.txtName = new System.Windows.Forms.TextBox();
@@ -56,25 +61,21 @@ namespace MedicalManagement.Forms
             this.lblEmail = new System.Windows.Forms.Label();
             this.lblGhichu = new System.Windows.Forms.Label();
             this.lblMaKH = new System.Windows.Forms.Label();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.typeDataGridViewCheckBoxColumn = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.phoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.emailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.addressDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.notesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.customerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.btnNext = new System.Windows.Forms.Button();
+            this.btnLast = new System.Windows.Forms.Button();
+            this.btnFirst = new System.Windows.Forms.Button();
+            this.btnPrevious = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachhang)).BeginInit();
-            this.pnCustomer.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).BeginInit();
+            this.pnCustomer.SuspendLayout();
             this.SuspendLayout();
             // 
             // btnAdd
             // 
             this.btnAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnAdd.Location = new System.Drawing.Point(551, 486);
+            this.btnAdd.Location = new System.Drawing.Point(551, 460);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(46, 35);
+            this.btnAdd.Size = new System.Drawing.Size(46, 30);
             this.btnAdd.TabIndex = 0;
             this.btnAdd.Text = "Thêm";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -84,9 +85,9 @@ namespace MedicalManagement.Forms
             // 
             this.btnSave.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSave.Enabled = false;
-            this.btnSave.Location = new System.Drawing.Point(707, 486);
+            this.btnSave.Location = new System.Drawing.Point(707, 460);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(46, 35);
+            this.btnSave.Size = new System.Drawing.Size(46, 30);
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "Lưu";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -95,9 +96,9 @@ namespace MedicalManagement.Forms
             // btnDel
             // 
             this.btnDel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnDel.Location = new System.Drawing.Point(655, 486);
+            this.btnDel.Location = new System.Drawing.Point(655, 460);
             this.btnDel.Name = "btnDel";
-            this.btnDel.Size = new System.Drawing.Size(46, 35);
+            this.btnDel.Size = new System.Drawing.Size(46, 30);
             this.btnDel.TabIndex = 3;
             this.btnDel.Text = "Xóa";
             this.btnDel.UseVisualStyleBackColor = true;
@@ -106,9 +107,9 @@ namespace MedicalManagement.Forms
             // btnEdit
             // 
             this.btnEdit.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnEdit.Location = new System.Drawing.Point(603, 486);
+            this.btnEdit.Location = new System.Drawing.Point(603, 460);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(46, 35);
+            this.btnEdit.Size = new System.Drawing.Size(46, 30);
             this.btnEdit.TabIndex = 4;
             this.btnEdit.Text = "Sửa";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -124,49 +125,6 @@ namespace MedicalManagement.Forms
             this.lblKH.Size = new System.Drawing.Size(208, 29);
             this.lblKH.TabIndex = 5;
             this.lblKH.Text = "Quản lý khách hàng";
-            // 
-            // btnDau
-            // 
-            this.btnDau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnDau.Location = new System.Drawing.Point(12, 486);
-            this.btnDau.Name = "btnDau";
-            this.btnDau.Size = new System.Drawing.Size(76, 30);
-            this.btnDau.TabIndex = 21;
-            this.btnDau.Text = "Đầu";
-            this.btnDau.UseVisualStyleBackColor = true;
-            this.btnDau.Click += new System.EventHandler(this.btnDau_Click);
-            // 
-            // btnCuoi
-            // 
-            this.btnCuoi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnCuoi.Location = new System.Drawing.Point(279, 486);
-            this.btnCuoi.Name = "btnCuoi";
-            this.btnCuoi.Size = new System.Drawing.Size(76, 30);
-            this.btnCuoi.TabIndex = 22;
-            this.btnCuoi.Text = "Cuối";
-            this.btnCuoi.UseVisualStyleBackColor = true;
-            this.btnCuoi.Click += new System.EventHandler(this.btnCuoi_Click);
-            // 
-            // btnSau
-            // 
-            this.btnSau.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnSau.Location = new System.Drawing.Point(190, 486);
-            this.btnSau.Name = "btnSau";
-            this.btnSau.Size = new System.Drawing.Size(76, 30);
-            this.btnSau.TabIndex = 23;
-            this.btnSau.Text = "Sau";
-            this.btnSau.Click += new System.EventHandler(this.btnSau_Click);
-            // 
-            // btnTruoc
-            // 
-            this.btnTruoc.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.btnTruoc.Location = new System.Drawing.Point(101, 486);
-            this.btnTruoc.Name = "btnTruoc";
-            this.btnTruoc.Size = new System.Drawing.Size(76, 30);
-            this.btnTruoc.TabIndex = 24;
-            this.btnTruoc.Text = "Trước";
-            this.btnTruoc.UseVisualStyleBackColor = true;
-            this.btnTruoc.Click += new System.EventHandler(this.btnTruoc_Click);
             // 
             // dgvKhachhang
             // 
@@ -190,17 +148,70 @@ namespace MedicalManagement.Forms
             this.dgvKhachhang.Name = "dgvKhachhang";
             this.dgvKhachhang.ReadOnly = true;
             this.dgvKhachhang.RowHeadersWidth = 51;
-            this.dgvKhachhang.Size = new System.Drawing.Size(793, 278);
+            this.dgvKhachhang.Size = new System.Drawing.Size(793, 262);
             this.dgvKhachhang.TabIndex = 25;
             this.dgvKhachhang.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvKhachhang_CellContentClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Mã KH";
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // nameDataGridViewTextBoxColumn
+            // 
+            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
+            this.nameDataGridViewTextBoxColumn.HeaderText = "Tên KH";
+            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // typeDataGridViewCheckBoxColumn
+            // 
+            this.typeDataGridViewCheckBoxColumn.DataPropertyName = "Type";
+            this.typeDataGridViewCheckBoxColumn.HeaderText = "Loại đối tượng";
+            this.typeDataGridViewCheckBoxColumn.Name = "typeDataGridViewCheckBoxColumn";
+            this.typeDataGridViewCheckBoxColumn.ReadOnly = true;
+            // 
+            // phoneDataGridViewTextBoxColumn
+            // 
+            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
+            this.phoneDataGridViewTextBoxColumn.HeaderText = "SĐT";
+            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
+            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // emailDataGridViewTextBoxColumn
+            // 
+            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
+            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
+            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // addressDataGridViewTextBoxColumn
+            // 
+            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
+            this.addressDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
+            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
+            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // notesDataGridViewTextBoxColumn
+            // 
+            this.notesDataGridViewTextBoxColumn.DataPropertyName = "Notes";
+            this.notesDataGridViewTextBoxColumn.HeaderText = "Ghi chú";
+            this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
+            this.notesDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // customerBindingSource
+            // 
+            this.customerBindingSource.DataSource = typeof(MedicalManagement.Model.Customer);
             // 
             // btnCancle
             // 
             this.btnCancle.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnCancle.Enabled = false;
-            this.btnCancle.Location = new System.Drawing.Point(759, 486);
+            this.btnCancle.Location = new System.Drawing.Point(759, 460);
             this.btnCancle.Name = "btnCancle";
-            this.btnCancle.Size = new System.Drawing.Size(46, 35);
+            this.btnCancle.Size = new System.Drawing.Size(46, 30);
             this.btnCancle.TabIndex = 0;
             this.btnCancle.Text = "Huỷ";
             this.btnCancle.UseVisualStyleBackColor = true;
@@ -353,70 +364,65 @@ namespace MedicalManagement.Forms
             this.lblMaKH.TabIndex = 21;
             this.lblMaKH.Text = "Mã Khách hàng:";
             // 
-            // idDataGridViewTextBoxColumn
+            // btnNext
             // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Mã KH";
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.btnNext.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
+            this.btnNext.Location = new System.Drawing.Point(98, 460);
+            this.btnNext.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(29, 30);
+            this.btnNext.TabIndex = 31;
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnSau_Click);
             // 
-            // nameDataGridViewTextBoxColumn
+            // btnLast
             // 
-            this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
-            this.nameDataGridViewTextBoxColumn.HeaderText = "Tên KH";
-            this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
-            this.nameDataGridViewTextBoxColumn.ReadOnly = true;
+            this.btnLast.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnLast.Image = ((System.Drawing.Image)(resources.GetObject("btnLast.Image")));
+            this.btnLast.Location = new System.Drawing.Point(142, 460);
+            this.btnLast.Margin = new System.Windows.Forms.Padding(2);
+            this.btnLast.Name = "btnLast";
+            this.btnLast.Size = new System.Drawing.Size(38, 30);
+            this.btnLast.TabIndex = 30;
+            this.btnLast.UseVisualStyleBackColor = true;
+            this.btnLast.Click += new System.EventHandler(this.btnCuoi_Click);
             // 
-            // typeDataGridViewCheckBoxColumn
+            // btnFirst
             // 
-            this.typeDataGridViewCheckBoxColumn.DataPropertyName = "Type";
-            this.typeDataGridViewCheckBoxColumn.HeaderText = "Loại đối tượng";
-            this.typeDataGridViewCheckBoxColumn.Name = "typeDataGridViewCheckBoxColumn";
-            this.typeDataGridViewCheckBoxColumn.ReadOnly = true;
+            this.btnFirst.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnFirst.Image = ((System.Drawing.Image)(resources.GetObject("btnFirst.Image")));
+            this.btnFirst.Location = new System.Drawing.Point(12, 460);
+            this.btnFirst.Margin = new System.Windows.Forms.Padding(2);
+            this.btnFirst.Name = "btnFirst";
+            this.btnFirst.Size = new System.Drawing.Size(38, 30);
+            this.btnFirst.TabIndex = 29;
+            this.btnFirst.UseVisualStyleBackColor = true;
+            this.btnFirst.Click += new System.EventHandler(this.btnDau_Click);
             // 
-            // phoneDataGridViewTextBoxColumn
+            // btnPrevious
             // 
-            this.phoneDataGridViewTextBoxColumn.DataPropertyName = "Phone";
-            this.phoneDataGridViewTextBoxColumn.HeaderText = "SĐT";
-            this.phoneDataGridViewTextBoxColumn.Name = "phoneDataGridViewTextBoxColumn";
-            this.phoneDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // emailDataGridViewTextBoxColumn
-            // 
-            this.emailDataGridViewTextBoxColumn.DataPropertyName = "Email";
-            this.emailDataGridViewTextBoxColumn.HeaderText = "Email";
-            this.emailDataGridViewTextBoxColumn.Name = "emailDataGridViewTextBoxColumn";
-            this.emailDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // addressDataGridViewTextBoxColumn
-            // 
-            this.addressDataGridViewTextBoxColumn.DataPropertyName = "Address";
-            this.addressDataGridViewTextBoxColumn.HeaderText = "Địa chỉ";
-            this.addressDataGridViewTextBoxColumn.Name = "addressDataGridViewTextBoxColumn";
-            this.addressDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // notesDataGridViewTextBoxColumn
-            // 
-            this.notesDataGridViewTextBoxColumn.DataPropertyName = "Notes";
-            this.notesDataGridViewTextBoxColumn.HeaderText = "Ghi chú";
-            this.notesDataGridViewTextBoxColumn.Name = "notesDataGridViewTextBoxColumn";
-            this.notesDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // customerBindingSource
-            // 
-            this.customerBindingSource.DataSource = typeof(MedicalManagement.Model.Customer);
+            this.btnPrevious.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnPrevious.Image = ((System.Drawing.Image)(resources.GetObject("btnPrevious.Image")));
+            this.btnPrevious.Location = new System.Drawing.Point(64, 460);
+            this.btnPrevious.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPrevious.Name = "btnPrevious";
+            this.btnPrevious.Size = new System.Drawing.Size(29, 30);
+            this.btnPrevious.TabIndex = 28;
+            this.btnPrevious.UseVisualStyleBackColor = true;
+            this.btnPrevious.Click += new System.EventHandler(this.btnTruoc_Click);
             // 
             // frmKhachhang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(816, 543);
+            this.ClientSize = new System.Drawing.Size(816, 502);
+            this.Controls.Add(this.btnNext);
+            this.Controls.Add(this.btnLast);
+            this.Controls.Add(this.btnFirst);
+            this.Controls.Add(this.btnPrevious);
             this.Controls.Add(this.pnCustomer);
             this.Controls.Add(this.dgvKhachhang);
-            this.Controls.Add(this.btnTruoc);
-            this.Controls.Add(this.btnSau);
-            this.Controls.Add(this.btnCuoi);
-            this.Controls.Add(this.btnDau);
             this.Controls.Add(this.lblKH);
             this.Controls.Add(this.btnEdit);
             this.Controls.Add(this.btnDel);
@@ -427,9 +433,9 @@ namespace MedicalManagement.Forms
             this.Text = "Quản lý khách hàng";
             this.Load += new System.EventHandler(this.frmKhachhang_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvKhachhang)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.pnCustomer.ResumeLayout(false);
             this.pnCustomer.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.customerBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -442,10 +448,6 @@ namespace MedicalManagement.Forms
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnEdit;
         private System.Windows.Forms.Label lblKH;
-        private System.Windows.Forms.Button btnDau;
-        private System.Windows.Forms.Button btnCuoi;
-        private System.Windows.Forms.Button btnSau;
-        private System.Windows.Forms.Button btnTruoc;
         private System.Windows.Forms.DataGridView dgvKhachhang;
         private System.Windows.Forms.BindingSource customerBindingSource;
         private System.Windows.Forms.Button btnCancle;
@@ -471,5 +473,9 @@ namespace MedicalManagement.Forms
         private System.Windows.Forms.Label lblEmail;
         private System.Windows.Forms.Label lblGhichu;
         private System.Windows.Forms.Label lblMaKH;
+        private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.Button btnLast;
+        private System.Windows.Forms.Button btnFirst;
+        private System.Windows.Forms.Button btnPrevious;
     }
 }
