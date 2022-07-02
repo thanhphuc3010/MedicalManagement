@@ -50,22 +50,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Forms\frmDoctors.cs">
+    <Compile Include="frmDoctors.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmDoctors.Designer.cs">
+    <Compile Include="frmDoctors.Designer.cs">
       <DependentUpon>frmDoctors.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmExpiry.cs">
+    <Compile Include="frmExpiry.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmExpiry.Designer.cs">
+    <Compile Include="frmExpiry.Designer.cs">
       <DependentUpon>frmExpiry.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmForget.cs">
+    <Compile Include="frmForget.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmForget.Designer.cs">
+    <Compile Include="frmForget.Designer.cs">
       <DependentUpon>frmForget.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmCustomer.cs">
@@ -74,64 +74,64 @@
     <Compile Include="Forms\frmCustomer.Designer.cs">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmMedicineNotReceived.cs">
+    <Compile Include="frmMedicineNotReceived.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMedicineNotReceived.Designer.cs">
+    <Compile Include="frmMedicineNotReceived.Designer.cs">
       <DependentUpon>frmMedicineNotReceived.cs</DependentUpon>
     </Compile>
     <Compile Include="Helper\DataTableExtensions.cs" />
     <Compile Include="Helper\ListExtensions.cs" />
     <Compile Include="Helper\ObjectUtils.cs" />
     <Compile Include="Helper\SqlHelper.cs" />
-    <Compile Include="Forms\frmHome.cs">
+    <Compile Include="frmHome.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmHome.Designer.cs">
+    <Compile Include="frmHome.Designer.cs">
       <DependentUpon>frmHome.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmLogin.cs">
+    <Compile Include="frmLogin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmLogin.Designer.cs">
+    <Compile Include="frmLogin.Designer.cs">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmMedicine.cs">
+    <Compile Include="frmMedicine.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMedicine.Designer.cs">
+    <Compile Include="frmMedicine.Designer.cs">
       <DependentUpon>frmMedicine.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmMedicineReceived.cs">
+    <Compile Include="frmMedicineReceived.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmMedicineReceived.Designer.cs">
+    <Compile Include="frmMedicineReceived.Designer.cs">
       <DependentUpon>frmMedicineReceived.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmPay.cs">
+    <Compile Include="frmPay.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmPay.Designer.cs">
+    <Compile Include="frmPay.Designer.cs">
       <DependentUpon>frmPay.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Forms\frmRegister.cs">
+    <Compile Include="frmRegister.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmRegister.Designer.cs">
+    <Compile Include="frmRegister.Designer.cs">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmSupplier.cs">
+    <Compile Include="frmSupplier.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmSupplier.Designer.cs">
+    <Compile Include="frmSupplier.Designer.cs">
       <DependentUpon>frmSupplier.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\frmTransactionSearch.cs">
+    <Compile Include="frmTransactionSearch.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Forms\frmTransactionSearch.Designer.cs">
+    <Compile Include="frmTransactionSearch.Designer.cs">
       <DependentUpon>frmTransactionSearch.cs</DependentUpon>
     </Compile>
     <Compile Include="rptDayRevenue.cs">
@@ -158,37 +158,37 @@
       <DependentUpon>rpt_inventory.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
-    <EmbeddedResource Include="Forms\frmDoctors.resx">
+    <EmbeddedResource Include="frmDoctors.resx">
       <DependentUpon>frmDoctors.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmExpiry.resx">
+    <EmbeddedResource Include="frmExpiry.resx">
       <DependentUpon>frmExpiry.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmForget.resx">
+    <EmbeddedResource Include="frmForget.resx">
       <DependentUpon>frmForget.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmCustomer.resx">
       <DependentUpon>frmCustomer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmHome.resx">
+    <EmbeddedResource Include="frmHome.resx">
       <DependentUpon>frmHome.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmLogin.resx">
+    <EmbeddedResource Include="frmLogin.resx">
       <DependentUpon>frmLogin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmMedicine.resx">
+    <EmbeddedResource Include="frmMedicine.resx">
       <DependentUpon>frmMedicine.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmMedicineNotReceived.resx">
+    <EmbeddedResource Include="frmMedicineNotReceived.resx">
       <DependentUpon>frmMedicineNotReceived.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmMedicineReceived.resx">
+    <EmbeddedResource Include="frmMedicineReceived.resx">
       <DependentUpon>frmMedicineReceived.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmPay.resx">
+    <EmbeddedResource Include="frmPay.resx">
       <DependentUpon>frmPay.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmTransactionSearch.resx">
+    <EmbeddedResource Include="frmTransactionSearch.resx">
       <DependentUpon>frmTransactionSearch.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -200,10 +200,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Forms\frmRegister.resx">
+    <EmbeddedResource Include="frmRegister.resx">
       <DependentUpon>frmRegister.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\frmSupplier.resx">
+    <EmbeddedResource Include="frmSupplier.resx">
       <DependentUpon>frmSupplier.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="rptDayRevenue.rpt">
