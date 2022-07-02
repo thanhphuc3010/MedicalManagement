@@ -17,6 +17,8 @@ namespace MedicalManagement.Forms
     public partial class frmKhachhang : Form
     {
         private List<Customer> customers;
+
+        // Active customer -> customer mà mình đang edit/ add hoặc ...
         private Customer customer = new Customer();
         private bool isAddNew = false;
 
@@ -44,8 +46,10 @@ namespace MedicalManagement.Forms
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
+            // Nếu isAddNew = true tức là lúc nhấn save gọi đến InsertCustomer(), ngược lại thì gọi UpdateCustomer().
             isAddNew = true;
 
+            // Enable hoặc disable các control tương ứng
             pnCustomer.Enable();
             btnAdd.Disable();
             btnEdit.Disable();
@@ -53,7 +57,10 @@ namespace MedicalManagement.Forms
             btnSave.Enable();
             btnCancle.Enable();
          
+            // Reset các ô nhập cần thiết cho việc tạo mới
             ResetAllTextBox();
+
+            // Tạo ra 1 biến kiểu customer để chứa dữ liệu của customer sẽ được add thêm
             Customer customer = new Customer();
             this.customer = customer;
             BindingCustomerData(this.customer);
@@ -81,6 +88,7 @@ namespace MedicalManagement.Forms
 
         private void BindingCustomerData(Customer customer)
         {
+            // Khi txtId thay đổi dữ liệu thì tự động cập nhật giá trị đó vào trường Id của customer
             txtId.BindingWith(customer, "Id");
             txtName.BindingWith(customer, "Name");
             txtType.BindingWith(customer, "Type");
@@ -105,7 +113,7 @@ namespace MedicalManagement.Forms
         {
             if (isAddNew)
             {
-                CustomerDAO.InsertCustomer(customer);
+                CustomerDAO.InsertCustomer(this.customer);
             }
             else
             {
@@ -134,7 +142,7 @@ namespace MedicalManagement.Forms
             btnSave.Enable();
             btnCancle.Enable();
 
-            customer = customerBindingSource.Current as Customer;
+            Customer customer = customerBindingSource.Current as Customer;
 
             Customer editingCustomer = customer.Clone() as Customer;
             this.customer = editingCustomer;

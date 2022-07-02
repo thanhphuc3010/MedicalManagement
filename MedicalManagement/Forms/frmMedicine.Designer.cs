@@ -29,6 +29,7 @@ namespace MedicalManagement
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedicine));
             this.txtTax = new System.Windows.Forms.TextBox();
             this.txtId = new System.Windows.Forms.TextBox();
@@ -66,8 +67,23 @@ namespace MedicalManagement
             this.dgvBash = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.txt_ingrediant = new System.Windows.Forms.TextBox();
+            this.itemBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.Id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ItemName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.makeIdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.makeNameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contentsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantityAvailableDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.quantity0rderDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.ingredientDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.packagingDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.priceDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.costDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.taxDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.noteDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicine)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBash)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // txtTax
@@ -139,16 +155,35 @@ namespace MedicalManagement
             this.cbbReceived.Name = "cbbReceived";
             this.cbbReceived.Size = new System.Drawing.Size(283, 30);
             this.cbbReceived.TabIndex = 51;
-            this.cbbReceived.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // dgvMedicine
             // 
+            this.dgvMedicine.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvMedicine.AutoGenerateColumns = false;
+            this.dgvMedicine.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvMedicine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMedicine.Location = new System.Drawing.Point(-2, 484);
+            this.dgvMedicine.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Id,
+            this.ItemName,
+            this.makeIdDataGridViewTextBoxColumn,
+            this.makeNameDataGridViewTextBoxColumn,
+            this.contentsDataGridViewTextBoxColumn,
+            this.quantityAvailableDataGridViewTextBoxColumn,
+            this.quantity0rderDataGridViewTextBoxColumn,
+            this.ingredientDataGridViewTextBoxColumn,
+            this.packagingDataGridViewTextBoxColumn,
+            this.priceDataGridViewTextBoxColumn,
+            this.costDataGridViewTextBoxColumn,
+            this.taxDataGridViewTextBoxColumn,
+            this.noteDataGridViewTextBoxColumn});
+            this.dgvMedicine.DataSource = this.itemBindingSource;
+            this.dgvMedicine.Location = new System.Drawing.Point(12, 484);
             this.dgvMedicine.Name = "dgvMedicine";
             this.dgvMedicine.RowHeadersWidth = 51;
             this.dgvMedicine.RowTemplate.Height = 24;
-            this.dgvMedicine.Size = new System.Drawing.Size(953, 394);
+            this.dgvMedicine.Size = new System.Drawing.Size(1421, 394);
             this.dgvMedicine.TabIndex = 52;
             // 
             // cbbProperties
@@ -168,7 +203,6 @@ namespace MedicalManagement
             this.cbbValuesFilter.Name = "cbbValuesFilter";
             this.cbbValuesFilter.Size = new System.Drawing.Size(282, 34);
             this.cbbValuesFilter.TabIndex = 54;
-            this.cbbValuesFilter.SelectedIndexChanged += new System.EventHandler(this.cbbValuesFilter_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -186,7 +220,7 @@ namespace MedicalManagement
             this.btnFilter.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFilter.ForeColor = System.Drawing.Color.Blue;
-            this.btnFilter.Location = new System.Drawing.Point(1426, 101);
+            this.btnFilter.Location = new System.Drawing.Point(1519, 95);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(105, 42);
             this.btnFilter.TabIndex = 56;
@@ -400,11 +434,11 @@ namespace MedicalManagement
             // dgvBash
             // 
             this.dgvBash.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBash.Location = new System.Drawing.Point(957, 484);
+            this.dgvBash.Location = new System.Drawing.Point(775, 151);
             this.dgvBash.Name = "dgvBash";
             this.dgvBash.RowHeadersWidth = 51;
             this.dgvBash.RowTemplate.Height = 24;
-            this.dgvBash.Size = new System.Drawing.Size(667, 394);
+            this.dgvBash.Size = new System.Drawing.Size(658, 231);
             this.dgvBash.TabIndex = 84;
             // 
             // label4
@@ -425,11 +459,107 @@ namespace MedicalManagement
             this.txt_ingrediant.Size = new System.Drawing.Size(284, 28);
             this.txt_ingrediant.TabIndex = 49;
             // 
+            // itemBindingSource
+            // 
+            this.itemBindingSource.DataSource = typeof(MedicalManagement.Model.Item);
+            // 
+            // Id
+            // 
+            this.Id.DataPropertyName = "Id";
+            this.Id.HeaderText = "Mã thuốc";
+            this.Id.MinimumWidth = 6;
+            this.Id.Name = "Id";
+            // 
+            // ItemName
+            // 
+            this.ItemName.DataPropertyName = "ItemName";
+            this.ItemName.HeaderText = "Tên thuốc";
+            this.ItemName.MinimumWidth = 6;
+            this.ItemName.Name = "ItemName";
+            // 
+            // makeIdDataGridViewTextBoxColumn
+            // 
+            this.makeIdDataGridViewTextBoxColumn.DataPropertyName = "MakeId";
+            this.makeIdDataGridViewTextBoxColumn.HeaderText = "MakeId";
+            this.makeIdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.makeIdDataGridViewTextBoxColumn.Name = "makeIdDataGridViewTextBoxColumn";
+            this.makeIdDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // makeNameDataGridViewTextBoxColumn
+            // 
+            this.makeNameDataGridViewTextBoxColumn.DataPropertyName = "MakeName";
+            this.makeNameDataGridViewTextBoxColumn.HeaderText = "Nhà sản xuất";
+            this.makeNameDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.makeNameDataGridViewTextBoxColumn.Name = "makeNameDataGridViewTextBoxColumn";
+            // 
+            // contentsDataGridViewTextBoxColumn
+            // 
+            this.contentsDataGridViewTextBoxColumn.DataPropertyName = "Contents";
+            this.contentsDataGridViewTextBoxColumn.HeaderText = "Contents";
+            this.contentsDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.contentsDataGridViewTextBoxColumn.Name = "contentsDataGridViewTextBoxColumn";
+            // 
+            // quantityAvailableDataGridViewTextBoxColumn
+            // 
+            this.quantityAvailableDataGridViewTextBoxColumn.DataPropertyName = "QuantityAvailable";
+            this.quantityAvailableDataGridViewTextBoxColumn.HeaderText = "QuantityAvailable";
+            this.quantityAvailableDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.quantityAvailableDataGridViewTextBoxColumn.Name = "quantityAvailableDataGridViewTextBoxColumn";
+            // 
+            // quantity0rderDataGridViewTextBoxColumn
+            // 
+            this.quantity0rderDataGridViewTextBoxColumn.DataPropertyName = "Quantity0rder";
+            this.quantity0rderDataGridViewTextBoxColumn.HeaderText = "Quantity0rder";
+            this.quantity0rderDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.quantity0rderDataGridViewTextBoxColumn.Name = "quantity0rderDataGridViewTextBoxColumn";
+            // 
+            // ingredientDataGridViewTextBoxColumn
+            // 
+            this.ingredientDataGridViewTextBoxColumn.DataPropertyName = "Ingredient";
+            this.ingredientDataGridViewTextBoxColumn.HeaderText = "Ingredient";
+            this.ingredientDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.ingredientDataGridViewTextBoxColumn.Name = "ingredientDataGridViewTextBoxColumn";
+            // 
+            // packagingDataGridViewTextBoxColumn
+            // 
+            this.packagingDataGridViewTextBoxColumn.DataPropertyName = "Packaging";
+            this.packagingDataGridViewTextBoxColumn.HeaderText = "Packaging";
+            this.packagingDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.packagingDataGridViewTextBoxColumn.Name = "packagingDataGridViewTextBoxColumn";
+            // 
+            // priceDataGridViewTextBoxColumn
+            // 
+            this.priceDataGridViewTextBoxColumn.DataPropertyName = "Price";
+            this.priceDataGridViewTextBoxColumn.HeaderText = "Price";
+            this.priceDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.priceDataGridViewTextBoxColumn.Name = "priceDataGridViewTextBoxColumn";
+            // 
+            // costDataGridViewTextBoxColumn
+            // 
+            this.costDataGridViewTextBoxColumn.DataPropertyName = "Cost";
+            this.costDataGridViewTextBoxColumn.HeaderText = "Cost";
+            this.costDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.costDataGridViewTextBoxColumn.Name = "costDataGridViewTextBoxColumn";
+            // 
+            // taxDataGridViewTextBoxColumn
+            // 
+            this.taxDataGridViewTextBoxColumn.DataPropertyName = "Tax";
+            this.taxDataGridViewTextBoxColumn.HeaderText = "Tax";
+            this.taxDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.taxDataGridViewTextBoxColumn.Name = "taxDataGridViewTextBoxColumn";
+            // 
+            // noteDataGridViewTextBoxColumn
+            // 
+            this.noteDataGridViewTextBoxColumn.DataPropertyName = "Note";
+            this.noteDataGridViewTextBoxColumn.HeaderText = "Note";
+            this.noteDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.noteDataGridViewTextBoxColumn.Name = "noteDataGridViewTextBoxColumn";
+            // 
             // frmMedicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1636, 890);
+            this.ClientSize = new System.Drawing.Size(1445, 890);
             this.Controls.Add(this.dgvBash);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label17);
@@ -468,9 +598,10 @@ namespace MedicalManagement
             this.Controls.Add(this.txtTax);
             this.Name = "frmMedicine";
             this.Text = "Medicine";
-            this.Load += new System.EventHandler(this.Medicine_Load);
+            this.Load += new System.EventHandler(this.frmMedicine_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMedicine)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvBash)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.itemBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -513,5 +644,19 @@ namespace MedicalManagement
         private System.Windows.Forms.DataGridView dgvBash;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox txt_ingrediant;
+        private System.Windows.Forms.BindingSource itemBindingSource;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Id;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ItemName;
+        private System.Windows.Forms.DataGridViewTextBoxColumn makeIdDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn makeNameDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn contentsDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantityAvailableDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn quantity0rderDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn ingredientDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn packagingDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn priceDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn costDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn taxDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn noteDataGridViewTextBoxColumn;
     }
 }

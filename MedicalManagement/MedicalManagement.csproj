@@ -245,6 +245,7 @@
       <DependentUpon>frmKhachhang.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\DataSources\MedicalManagement.Model.Customer.datasource" />
+    <None Include="Properties\DataSources\MedicalManagement.Model.Item.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
