@@ -30,19 +30,15 @@ namespace MedicalManagement
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMedicine));
-            this.txtExpiry = new System.Windows.Forms.TextBox();
             this.txtTax = new System.Windows.Forms.TextBox();
-            this.txtIDmedicine = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.txtPrice = new System.Windows.Forms.TextBox();
             this.txtNote = new System.Windows.Forms.TextBox();
-            this.txtQuantity = new System.Windows.Forms.TextBox();
-            this.txt_inputPrice = new System.Windows.Forms.TextBox();
             this.txtMedicineName = new System.Windows.Forms.TextBox();
             this.txtMade_in = new System.Windows.Forms.TextBox();
-            this.txt_ingrediant = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.cbbReceived = new System.Windows.Forms.ComboBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgvMedicine = new System.Windows.Forms.DataGridView();
             this.cbbProperties = new System.Windows.Forms.ComboBox();
             this.cbbValuesFilter = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -58,85 +54,60 @@ namespace MedicalManagement
             this.btnPrevious = new System.Windows.Forms.Button();
             this.txtSupplierName = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txtLot = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvBash = new System.Windows.Forms.DataGridView();
+            this.label4 = new System.Windows.Forms.Label();
+            this.txt_ingrediant = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicine)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBash)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtExpiry
-            // 
-            this.txtExpiry.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtExpiry.Location = new System.Drawing.Point(78, 302);
-            this.txtExpiry.Name = "txtExpiry";
-            this.txtExpiry.Size = new System.Drawing.Size(284, 28);
-            this.txtExpiry.TabIndex = 13;
             // 
             // txtTax
             // 
             this.txtTax.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtTax.Location = new System.Drawing.Point(799, 461);
+            this.txtTax.Location = new System.Drawing.Point(403, 248);
             this.txtTax.Name = "txtTax";
-            this.txtTax.Size = new System.Drawing.Size(283, 28);
+            this.txtTax.Size = new System.Drawing.Size(330, 28);
             this.txtTax.TabIndex = 14;
             // 
-            // txtIDmedicine
+            // txtId
             // 
-            this.txtIDmedicine.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtIDmedicine.Location = new System.Drawing.Point(78, 221);
-            this.txtIDmedicine.Name = "txtIDmedicine";
-            this.txtIDmedicine.Size = new System.Drawing.Size(284, 28);
-            this.txtIDmedicine.TabIndex = 17;
+            this.txtId.Enabled = false;
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtId.Location = new System.Drawing.Point(75, 101);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(284, 28);
+            this.txtId.TabIndex = 17;
             // 
             // txtPrice
             // 
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(799, 382);
+            this.txtPrice.Location = new System.Drawing.Point(403, 169);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(283, 28);
+            this.txtPrice.Size = new System.Drawing.Size(330, 28);
             this.txtPrice.TabIndex = 39;
             // 
             // txtNote
             // 
             this.txtNote.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNote.Location = new System.Drawing.Point(1238, 261);
+            this.txtNote.Location = new System.Drawing.Point(403, 323);
             this.txtNote.Multiline = true;
             this.txtNote.Name = "txtNote";
-            this.txtNote.Size = new System.Drawing.Size(690, 228);
+            this.txtNote.Size = new System.Drawing.Size(330, 98);
             this.txtNote.TabIndex = 37;
-            // 
-            // txtQuantity
-            // 
-            this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.Location = new System.Drawing.Point(439, 382);
-            this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(283, 28);
-            this.txtQuantity.TabIndex = 35;
-            // 
-            // txt_inputPrice
-            // 
-            this.txt_inputPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_inputPrice.Location = new System.Drawing.Point(799, 302);
-            this.txt_inputPrice.Name = "txt_inputPrice";
-            this.txt_inputPrice.Size = new System.Drawing.Size(283, 28);
-            this.txt_inputPrice.TabIndex = 40;
             // 
             // txtMedicineName
             // 
             this.txtMedicineName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMedicineName.Location = new System.Drawing.Point(439, 221);
+            this.txtMedicineName.Location = new System.Drawing.Point(75, 169);
             this.txtMedicineName.Name = "txtMedicineName";
             this.txtMedicineName.Size = new System.Drawing.Size(283, 28);
             this.txtMedicineName.TabIndex = 46;
@@ -144,25 +115,17 @@ namespace MedicalManagement
             // txtMade_in
             // 
             this.txtMade_in.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtMade_in.Location = new System.Drawing.Point(439, 302);
+            this.txtMade_in.Location = new System.Drawing.Point(75, 244);
             this.txtMade_in.Name = "txtMade_in";
             this.txtMade_in.Size = new System.Drawing.Size(283, 28);
             this.txtMade_in.TabIndex = 43;
-            // 
-            // txt_ingrediant
-            // 
-            this.txt_ingrediant.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_ingrediant.Location = new System.Drawing.Point(78, 382);
-            this.txt_ingrediant.Name = "txt_ingrediant";
-            this.txt_ingrediant.Size = new System.Drawing.Size(284, 28);
-            this.txt_ingrediant.TabIndex = 49;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Blue;
-            this.label2.Location = new System.Drawing.Point(77, 79);
+            this.label2.Location = new System.Drawing.Point(703, 20);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(214, 26);
             this.label2.TabIndex = 50;
@@ -172,27 +135,27 @@ namespace MedicalManagement
             // 
             this.cbbReceived.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbReceived.FormattingEnabled = true;
-            this.cbbReceived.Location = new System.Drawing.Point(79, 459);
+            this.cbbReceived.Location = new System.Drawing.Point(75, 391);
             this.cbbReceived.Name = "cbbReceived";
             this.cbbReceived.Size = new System.Drawing.Size(283, 30);
             this.cbbReceived.TabIndex = 51;
             this.cbbReceived.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // dataGridView1
+            // dgvMedicine
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(82, 618);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1879, 271);
-            this.dataGridView1.TabIndex = 52;
+            this.dgvMedicine.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMedicine.Location = new System.Drawing.Point(-2, 484);
+            this.dgvMedicine.Name = "dgvMedicine";
+            this.dgvMedicine.RowHeadersWidth = 51;
+            this.dgvMedicine.RowTemplate.Height = 24;
+            this.dgvMedicine.Size = new System.Drawing.Size(953, 394);
+            this.dgvMedicine.TabIndex = 52;
             // 
             // cbbProperties
             // 
             this.cbbProperties.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbProperties.FormattingEnabled = true;
-            this.cbbProperties.Location = new System.Drawing.Point(1279, 97);
+            this.cbbProperties.Location = new System.Drawing.Point(775, 95);
             this.cbbProperties.Name = "cbbProperties";
             this.cbbProperties.Size = new System.Drawing.Size(282, 34);
             this.cbbProperties.TabIndex = 53;
@@ -201,7 +164,7 @@ namespace MedicalManagement
             // 
             this.cbbValuesFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbbValuesFilter.FormattingEnabled = true;
-            this.cbbValuesFilter.Location = new System.Drawing.Point(1646, 97);
+            this.cbbValuesFilter.Location = new System.Drawing.Point(1118, 101);
             this.cbbValuesFilter.Name = "cbbValuesFilter";
             this.cbbValuesFilter.Size = new System.Drawing.Size(282, 34);
             this.cbbValuesFilter.TabIndex = 54;
@@ -211,7 +174,7 @@ namespace MedicalManagement
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(1591, 101);
+            this.label1.Location = new System.Drawing.Point(1087, 99);
             this.label1.Name = "label1";
             this.label1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.label1.Size = new System.Drawing.Size(25, 26);
@@ -223,7 +186,7 @@ namespace MedicalManagement
             this.btnFilter.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnFilter.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFilter.ForeColor = System.Drawing.Color.Blue;
-            this.btnFilter.Location = new System.Drawing.Point(1279, 166);
+            this.btnFilter.Location = new System.Drawing.Point(1426, 101);
             this.btnFilter.Name = "btnFilter";
             this.btnFilter.Size = new System.Drawing.Size(105, 42);
             this.btnFilter.TabIndex = 56;
@@ -233,7 +196,7 @@ namespace MedicalManagement
             // btnFirst
             // 
             this.btnFirst.Image = ((System.Drawing.Image)(resources.GetObject("btnFirst.Image")));
-            this.btnFirst.Location = new System.Drawing.Point(135, 560);
+            this.btnFirst.Location = new System.Drawing.Point(76, 445);
             this.btnFirst.Name = "btnFirst";
             this.btnFirst.Size = new System.Drawing.Size(52, 33);
             this.btnFirst.TabIndex = 57;
@@ -244,7 +207,7 @@ namespace MedicalManagement
             this.btnBack.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBack.ForeColor = System.Drawing.Color.Blue;
-            this.btnBack.Location = new System.Drawing.Point(1779, 560);
+            this.btnBack.Location = new System.Drawing.Point(1334, 388);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(105, 33);
             this.btnBack.TabIndex = 58;
@@ -256,7 +219,7 @@ namespace MedicalManagement
             this.btnSave.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnSave.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSave.ForeColor = System.Drawing.Color.Blue;
-            this.btnSave.Location = new System.Drawing.Point(1646, 560);
+            this.btnSave.Location = new System.Drawing.Point(1194, 388);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(105, 33);
             this.btnSave.TabIndex = 59;
@@ -268,7 +231,7 @@ namespace MedicalManagement
             this.btnAdd.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAdd.ForeColor = System.Drawing.Color.Blue;
-            this.btnAdd.Location = new System.Drawing.Point(1247, 560);
+            this.btnAdd.Location = new System.Drawing.Point(774, 388);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(105, 33);
             this.btnAdd.TabIndex = 60;
@@ -280,7 +243,7 @@ namespace MedicalManagement
             this.btnFix.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnFix.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFix.ForeColor = System.Drawing.Color.Blue;
-            this.btnFix.Location = new System.Drawing.Point(1380, 560);
+            this.btnFix.Location = new System.Drawing.Point(914, 388);
             this.btnFix.Name = "btnFix";
             this.btnFix.Size = new System.Drawing.Size(105, 33);
             this.btnFix.TabIndex = 61;
@@ -292,7 +255,7 @@ namespace MedicalManagement
             this.btnDelete.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDelete.ForeColor = System.Drawing.Color.Blue;
-            this.btnDelete.Location = new System.Drawing.Point(1513, 560);
+            this.btnDelete.Location = new System.Drawing.Point(1054, 388);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(105, 33);
             this.btnDelete.TabIndex = 62;
@@ -302,7 +265,7 @@ namespace MedicalManagement
             // btnLast
             // 
             this.btnLast.Image = ((System.Drawing.Image)(resources.GetObject("btnLast.Image")));
-            this.btnLast.Location = new System.Drawing.Point(310, 561);
+            this.btnLast.Location = new System.Drawing.Point(251, 445);
             this.btnLast.Name = "btnLast";
             this.btnLast.Size = new System.Drawing.Size(52, 33);
             this.btnLast.TabIndex = 63;
@@ -311,7 +274,7 @@ namespace MedicalManagement
             // btnNext
             // 
             this.btnNext.Image = ((System.Drawing.Image)(resources.GetObject("btnNext.Image")));
-            this.btnNext.Location = new System.Drawing.Point(252, 561);
+            this.btnNext.Location = new System.Drawing.Point(193, 445);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(42, 33);
             this.btnNext.TabIndex = 64;
@@ -320,7 +283,7 @@ namespace MedicalManagement
             // btnPrevious
             // 
             this.btnPrevious.Image = ((System.Drawing.Image)(resources.GetObject("btnPrevious.Image")));
-            this.btnPrevious.Location = new System.Drawing.Point(204, 560);
+            this.btnPrevious.Location = new System.Drawing.Point(145, 445);
             this.btnPrevious.Name = "btnPrevious";
             this.btnPrevious.Size = new System.Drawing.Size(42, 33);
             this.btnPrevious.TabIndex = 65;
@@ -329,36 +292,26 @@ namespace MedicalManagement
             // txtSupplierName
             // 
             this.txtSupplierName.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSupplierName.Location = new System.Drawing.Point(799, 221);
+            this.txtSupplierName.Location = new System.Drawing.Point(403, 101);
             this.txtSupplierName.Name = "txtSupplierName";
-            this.txtSupplierName.Size = new System.Drawing.Size(283, 28);
+            this.txtSupplierName.Size = new System.Drawing.Size(330, 28);
             this.txtSupplierName.TabIndex = 66;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(75, 198);
+            this.label3.Location = new System.Drawing.Point(75, 78);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(78, 20);
             this.label3.TabIndex = 67;
             this.label3.Text = "Mã thuốc";
             // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(435, 359);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(74, 20);
-            this.label4.TabIndex = 68;
-            this.label4.Text = "Số lượng";
-            // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(435, 279);
+            this.label5.Location = new System.Drawing.Point(75, 221);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(75, 20);
             this.label5.TabIndex = 69;
@@ -368,27 +321,17 @@ namespace MedicalManagement
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(78, 436);
+            this.label6.Location = new System.Drawing.Point(75, 368);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(122, 20);
             this.label6.TabIndex = 70;
             this.label6.Text = "Đã / đang nhập";
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(75, 279);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(69, 20);
-            this.label7.TabIndex = 71;
-            this.label7.Text = "Hạn SD";
-            // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(1657, 65);
+            this.label8.Location = new System.Drawing.Point(1153, 63);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(87, 24);
             this.label8.TabIndex = 72;
@@ -398,7 +341,7 @@ namespace MedicalManagement
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(1289, 65);
+            this.label9.Location = new System.Drawing.Point(785, 63);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(83, 24);
             this.label9.TabIndex = 73;
@@ -408,7 +351,7 @@ namespace MedicalManagement
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(435, 198);
+            this.label10.Location = new System.Drawing.Point(75, 146);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(83, 20);
             this.label10.TabIndex = 74;
@@ -418,38 +361,17 @@ namespace MedicalManagement
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(75, 359);
+            this.label11.Location = new System.Drawing.Point(75, 291);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(96, 20);
             this.label11.TabIndex = 75;
             this.label11.Text = "Thành phần";
             // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(1234, 234);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(64, 24);
-            this.label12.TabIndex = 76;
-            this.label12.Text = "NOTE";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(795, 279);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(76, 20);
-            this.label14.TabIndex = 78;
-            this.label14.Text = "Giá nhập";
-            // 
             // label15
             // 
             this.label15.AutoSize = true;
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(795, 359);
+            this.label15.Location = new System.Drawing.Point(403, 146);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(67, 20);
             this.label15.TabIndex = 79;
@@ -459,7 +381,7 @@ namespace MedicalManagement
             // 
             this.label16.AutoSize = true;
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label16.Location = new System.Drawing.Point(795, 198);
+            this.label16.Location = new System.Drawing.Point(403, 78);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(78, 20);
             this.label16.TabIndex = 80;
@@ -469,51 +391,56 @@ namespace MedicalManagement
             // 
             this.label17.AutoSize = true;
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(795, 438);
+            this.label17.Location = new System.Drawing.Point(403, 225);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(46, 20);
             this.label17.TabIndex = 81;
             this.label17.Text = "Thuế";
             // 
-            // label13
+            // dgvBash
             // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.Location = new System.Drawing.Point(435, 436);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(28, 20);
-            this.label13.TabIndex = 83;
-            this.label13.Text = "Lô";
-            this.label13.Click += new System.EventHandler(this.label13_Click);
+            this.dgvBash.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBash.Location = new System.Drawing.Point(957, 484);
+            this.dgvBash.Name = "dgvBash";
+            this.dgvBash.RowHeadersWidth = 51;
+            this.dgvBash.RowTemplate.Height = 24;
+            this.dgvBash.Size = new System.Drawing.Size(667, 394);
+            this.dgvBash.TabIndex = 84;
             // 
-            // txtLot
+            // label4
             // 
-            this.txtLot.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtLot.Location = new System.Drawing.Point(439, 461);
-            this.txtLot.Name = "txtLot";
-            this.txtLot.Size = new System.Drawing.Size(283, 28);
-            this.txtLot.TabIndex = 82;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(403, 300);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(67, 20);
+            this.label4.TabIndex = 81;
+            this.label4.Text = "Ghi chú";
+            // 
+            // txt_ingrediant
+            // 
+            this.txt_ingrediant.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_ingrediant.Location = new System.Drawing.Point(75, 314);
+            this.txt_ingrediant.Name = "txt_ingrediant";
+            this.txt_ingrediant.Size = new System.Drawing.Size(284, 28);
+            this.txt_ingrediant.TabIndex = 49;
             // 
             // frmMedicine
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1924, 890);
-            this.Controls.Add(this.label13);
-            this.Controls.Add(this.txtLot);
+            this.ClientSize = new System.Drawing.Size(1636, 890);
+            this.Controls.Add(this.dgvBash);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
-            this.Controls.Add(this.label14);
-            this.Controls.Add(this.label12);
             this.Controls.Add(this.label11);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtSupplierName);
             this.Controls.Add(this.btnPrevious);
@@ -529,42 +456,36 @@ namespace MedicalManagement
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbbValuesFilter);
             this.Controls.Add(this.cbbProperties);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.dgvMedicine);
             this.Controls.Add(this.cbbReceived);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txt_ingrediant);
             this.Controls.Add(this.txtMedicineName);
             this.Controls.Add(this.txtMade_in);
-            this.Controls.Add(this.txt_inputPrice);
             this.Controls.Add(this.txtPrice);
             this.Controls.Add(this.txtNote);
-            this.Controls.Add(this.txtQuantity);
-            this.Controls.Add(this.txtIDmedicine);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.txtTax);
-            this.Controls.Add(this.txtExpiry);
             this.Name = "frmMedicine";
             this.Text = "Medicine";
             this.Load += new System.EventHandler(this.Medicine_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvMedicine)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBash)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtExpiry;
         private System.Windows.Forms.TextBox txtTax;
-        private System.Windows.Forms.TextBox txtIDmedicine;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.TextBox txtNote;
-        private System.Windows.Forms.TextBox txtQuantity;
-        private System.Windows.Forms.TextBox txt_inputPrice;
         private System.Windows.Forms.TextBox txtMedicineName;
         private System.Windows.Forms.TextBox txtMade_in;
-        private System.Windows.Forms.TextBox txt_ingrediant;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbbReceived;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvMedicine;
         private System.Windows.Forms.ComboBox cbbProperties;
         private System.Windows.Forms.ComboBox cbbValuesFilter;
         private System.Windows.Forms.Label label1;
@@ -580,20 +501,17 @@ namespace MedicalManagement
         private System.Windows.Forms.Button btnPrevious;
         private System.Windows.Forms.TextBox txtSupplierName;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
-        private System.Windows.Forms.Label label12;
-        private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.TextBox txtLot;
+        private System.Windows.Forms.DataGridView dgvBash;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.TextBox txt_ingrediant;
     }
 }
