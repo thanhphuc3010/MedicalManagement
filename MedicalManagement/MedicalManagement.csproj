@@ -36,9 +36,16 @@
     <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.ReportSource, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
     <Reference Include="CrystalDecisions.Shared, Version=13.0.4000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="ExcelDataReader, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.6.0\lib\net45\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.6.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.6.0\lib\net35\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.IO.Compression" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -75,6 +82,12 @@
     </Compile>
     <Compile Include="Forms\frmCustomer.Designer.cs">
       <DependentUpon>frmCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmMedicineDQG.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\frmMedicineDQG.Designer.cs">
+      <DependentUpon>frmMedicineDQG.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\frmMedicineNotReceived.cs">
       <SubType>Form</SubType>
@@ -130,6 +143,7 @@
     <Compile Include="Helper\TextBoxExtensions.cs" />
     <Compile Include="Model\Customer.cs" />
     <Compile Include="Model\Item.cs" />
+    <Compile Include="Model\Medicine.cs" />
     <Compile Include="Model\Staff.cs" />
     <Compile Include="Model\Supplier.cs" />
     <Compile Include="Program.cs" />
@@ -153,30 +167,6 @@
     <Compile Include="Forms\frmTransactionSearch.Designer.cs">
       <DependentUpon>frmTransactionSearch.cs</DependentUpon>
     </Compile>
-    <Compile Include="rptDayRevenue.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>rptDayRevenue.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="rptExpiry.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>rptExpiry.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="rptReceipt.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>rptReceipt.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="rpt_inventory.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>rpt_inventory.rpt</DependentUpon>
-      <SubType>Component</SubType>
-    </Compile>
     <EmbeddedResource Include="Forms\frmDoctors.resx">
       <DependentUpon>frmDoctors.cs</DependentUpon>
     </EmbeddedResource>
@@ -197,6 +187,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMedicine.resx">
       <DependentUpon>frmMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmMedicineDQG.resx">
+      <DependentUpon>frmMedicineDQG.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmMedicineNotReceived.resx">
       <DependentUpon>frmMedicineNotReceived.cs</DependentUpon>
@@ -225,27 +218,16 @@
     <EmbeddedResource Include="Forms\frmSupplier.resx">
       <DependentUpon>frmSupplier.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="rptDayRevenue.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rptDayRevenue.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="rptExpiry.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rptExpiry.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="rptReceipt.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rptReceipt.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="rpt_inventory.rpt">
-      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
-      <LastGenOutput>rpt_inventory.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmKhachhang.resx">
       <DependentUpon>frmKhachhang.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="DQG.xlsx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
     <None Include="Properties\DataSources\MedicalManagement.Model.Customer.datasource" />
     <None Include="Properties\DataSources\MedicalManagement.Model.Item.datasource" />
+    <None Include="Properties\DataSources\MedicalManagement.Model.Medicine.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
